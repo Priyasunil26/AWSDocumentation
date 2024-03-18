@@ -35,7 +35,7 @@ If you want to set up a PostgreSQL Database on EC2 Windows instance, follow the 
    - Follow the installation steps in the Bold BI documentation [here](https://help.boldbi.com/deploying-bold-bi/deploying-in-windows/installation-and-deployment/).
    - For guidance on startup configuration for Bold BI, refer to this [link](https://help.boldbi.com/application-startup/latest/).
 
-### 6. DNS Mapping and Binding with Bold BI Application
+### 4. DNS Mapping and Binding with Bold BI Application
 
 - Map IP Address to Domain Name
   - Log in to your domain registrar's website.
@@ -64,7 +64,7 @@ If you are configuring DNS mapping for your virtual machine (VM), it's important
 ![Volume selection](images/EC2volume.png)
 - Choose your EC2 instance volume, and in the upper right corner, click "Action" and select the "Create Snapshot" button.
 ![Snap Action](images/snapAction.png)
-- A new window will appear. Enter the Snapshot name and click Create snapshot.
+- A new window will appear. Enter the Snapshot name and click "Create snapshot".
 ![alt text](images/createsnap.png)
 - Once the snapshot is created, it will appear in the list of snapshots in the Amazon EC2 console.
 - For complete instructions to make a snapshot of an EC2 Windows instance, follow this [guide](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-creating-snapshot.html).
