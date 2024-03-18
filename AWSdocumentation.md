@@ -10,18 +10,18 @@
 ### 1. Launch an EC2 Windows instance on AWS
    - To create an EC2 Windows instance in AWS, refer to this [link](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html).
 
-### 2. Setup RDS for PostgreSQL
-If you want to set up a PostgreSQL database on EC2 Windows instance, follow the first step. If you prefer using a managed database in AWS, follow the second step.
+### 2. Setup RDS (Relational Database Service) for PostgreSQL
+If you want to set up a PostgreSQL Database on EC2 Windows instance, follow the first step. If you prefer using a managed RDS in AWS, follow the second step.
 
 #### a. Setting up PostgreSQL in a EC2 Windows instance
 - Download the [PostgreSQL installer for Windows](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and install it.
 - For detailed installation steps, refer to this [guide](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/).
 
-**Instructions:**
+**Information:**
   - For installing a MySQL database in a Windows EC2 instance, refer to the steps outlined in this [guide](https://dev.mysql.com/doc/refman/8.3/en/windows-installation.html).
   - To install an MS SQL database in Windows EC2 instance, follow the instructions provided in this [guide](https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16).
 
-#### b. Setting up PostgreSQL in AWS
+#### b. Setting up PostgreSQL RDS in AWS
 - To create an PostgreSQL RDS in AWS, refer to this [link](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/).
 
 **Information:** 
@@ -71,13 +71,13 @@ If you are configuring DNS mapping for your virtual machine (VM), it's important
 
 To restore a virtual machine (EC2 instance) from a snapshot in AWS, you would indeed first create an Amazon Machine Image (AMI) from the snapshot, and then use the AMI to launch a new EC2 instance. 
 ### 2. To create an AMI image from the snapshot
-- In the navigation pane, under "ELASTIC BLOCK STORE", select "Snapshots" then select your Snapshot that you created in above step then click on the action button on the above right and click on create image from snapshot.
+- In the navigation pane, under "ELASTIC BLOCK STORE", select "Snapshots" then select your Snapshot that you created in above step then click on the "Action" button on the above right and click on "Create image from snapshot".
 ![AMI action](images/Ami-action.png)
 - Enter a name for the AMI in the "Image name" field.Optionally, enter a description for the AMI in the "Image description" field.Choose an architecture for the AMI (e.g., 64-bit or 32-bit).
 Select the instance type for the AMI (e.g., t2.micro, m5.large, etc.).Configure other instance details as needed.
 - Review the AMI configuration and click on the "Create image" button to create the AMI.
 - Once the AMI is created, it will appear in the list of AMIs in the Amazon EC2 console.
-- To create an AMI image from the snapshot, refer to this [link](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Creating_EBSbacked_WinAMI.html).
+- For complete instructions to create an AMI image from the snapshot, refer to this [link](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Creating_EBSbacked_WinAMI.html).
 
 ### 3. Create a snapshot of an RDS instance
 - In the navigation pane, choose "Databases".
@@ -92,7 +92,8 @@ Select the RDS instance for which you want to create a snapshot.
 ### 4. Restore the EC2 instance from AMI
 - In the navigation pane, under "Images", select "AMIs".Select the AMI you want to use to restore your EC2 instance. Right-click on the selected AMI and choose "Launch Instance" from the context menu.
 ![launch Ami](images/AMI-launch.png)
-- Follow the instance launch wizard to configure your new EC2 instance. Select the instance type, configure networking, and add storage as needed. Review the instance details and click on the "Launch" button.If required, select an existing key pair or create a new one to access your instance securely.
+- Follow the instance launch wizard to configure your new EC2 instance.Enter the instance name, Select the instance type, configure networking, and add storage as needed. Review the instance details and click on the "Launch" button.If required, select an existing key pair or create a new one to access your instance securely.
+![Launch Name](images/ami-launch-name.png)
 ![Launch VM](images/ami-launch-network.png)
 - Once the instance is launched, you can access it using the specified key pair and any necessary credentials.
 
