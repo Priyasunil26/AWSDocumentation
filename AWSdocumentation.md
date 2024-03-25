@@ -10,7 +10,7 @@
 ### 1. Launch an EC2 Windows instance on AWS
    - To create an EC2 Windows instance in AWS, refer to this [link](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html).
 
-### 2. Setup RDS (Relational Database Service) for PostgreSQL
+### 2. Setup PostgreSQL Database
 If you want to set up a PostgreSQL Database on EC2 Windows instance, follow the step `a`. If you prefer using a managed RDS in AWS, follow the step `b`.
 
 #### a. Setting up PostgreSQL in a EC2 Windows instance
