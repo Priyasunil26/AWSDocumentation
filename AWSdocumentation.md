@@ -82,6 +82,11 @@ Select the instance type for the AMI (e.g., t2.micro, m5.large, etc.).Configure 
 ![Launch VM](images/ami-launch-network.png)
 - Once the instance is launched, you can access it using the specified key pair and any necessary credentials.
 
+**Note:** 
+
+If you are not using a managed database server, creating a snapshot of your virtual machine is enough.
+
+
 ### 3. Create a snapshot of an RDS instance
 - In the navigation pane, choose `Databases`.
 Select the RDS instance for which you want to create a snapshot.
@@ -100,7 +105,7 @@ Select the RDS instance for which you want to create a snapshot.
 - Click on the `Restore DB instance` button to start the restoration process.
 - Once the restoration is complete, verify that the new RDS instance is available and functioning as expected.
 
-## 6. Reset the connection string to use the restored PostgreSQL database and establish access to the application.
+## 5. Reset the connection string to use the restored PostgreSQL database and establish access to the application.
 
 - To use the restored database, you'll need to reset the database on your Virtual Machine.
 Detailed steps can be found in the following documentation: [Reset Application Database on Windows](https://help.boldbi.com/utilities/bold-bi-command-line-tools/reset-application-database/#windows)
