@@ -37,6 +37,8 @@ If you want to set up a PostgreSQL Database on EC2 Windows instance, follow the 
 
 ### 4. DNS Mapping and Binding with Bold BI Application (Optional)
 
+If you wish to expose your application using a domain, follow the steps below. Otherwise, if you want to expose your application through an IP address, skip these steps.
+
 - Map IP Address to Domain Name
   - Log in to your domain registrar's website.
   - Navigate to the DNS management section.
@@ -87,7 +89,7 @@ Select the instance type for the AMI (e.g., t2.micro, m5.large, etc.).Configure 
 If you are not using a managed database server, creating a snapshot of your virtual machine is enough.
 
 
-### 3. Create a snapshot of an RDS instance
+### 3. Create a snapshot of an RDS instance (AWS Managed instance)
 - In the navigation pane, choose `Databases`.
 Select the RDS instance for which you want to create a snapshot.
 ![Choose the Database](images/database-navigate.png)
@@ -97,7 +99,7 @@ Select the RDS instance for which you want to create a snapshot.
 ![snapshot of RDS](images/createDatabasesnap.png)
 - For complete instructions to Create a snapshot of an RDS instance refer to this [link](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateSnapshot.html)
 
-### 4. Restore the RDS from Snapshot
+### 4. Restore the RDS from Snapshot (AWS Managed instance)
 - Go to the Amazon RDS console. In the navigation pane, choose `Snapshots`. Select the snapshot you want to restore from.
 - Click on the `Actions` dropdown menu and select `Restore snapshot`.
 ![restoration of RDS](images/restoreDBaction.png)
